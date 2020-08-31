@@ -8,6 +8,8 @@ import Clock from './components/clock/Clock';
 import Contact from './components/contact/Contact';
 import Navigation from './components/navigation/Navigation';
 import PageNotFound from './components/pageNotFound/PageNotFound';
+import getTodo from './services/toDoService';
+import Jeopardy from './components/jeopardy/Jeopardy';
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
         />
         <Route path="/clock" component={Clock} />
         <Route path="/contact" component={Contact} />
+        <Route exact path="/jeopardy" component={Jeopardy} />
         <Route component={PageNotFound} />
+        <Route services={getTodo} />
       </Switch>
     </div>
   );
